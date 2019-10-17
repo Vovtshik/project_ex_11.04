@@ -1,5 +1,7 @@
 #include "../std_lib_facilities.h"
 
+int convert_to_decimal(string& s);
+
 int main()
 {
     cout << "Enter several octal, decimal, \n"
