@@ -1,6 +1,6 @@
 #include "../std_lib_facilities.h"
 
-int convert_to_decimal(string& s);
+void convert_to_decimal(string& s, vector<int>& vi);
 
 int main()
 {
@@ -12,4 +12,16 @@ int main()
     vector<int> nums;
 
     return 0;
+}
+
+void convert_to_decimal(string& s, vector<int>& vi)
+{
+    istringstream is(s);
+    is.unsetf(ios::dec);
+    is.unsetf(ios::oct);
+    is.unsetf(ios::hex);
+    for(int temp; is >> temp;)
+    {
+        vi.push_back(temp);
+    }
 }
