@@ -1,2 +1,2 @@
 # project_ex_11.04
- Programma  kotoraya pred­lagayet pol'zovatelyu vvesti neskol'ko tselykh vos'merichnykh, desyatich­nykh i shestnadtsaterichnykh chisel v lyubom sochetanii, ispol'zuya suf­fiksy 0 i 0kh; pravil'no interpretiruyet eti chisla i preobrovyvayet ikh v desyatichnyy vid. Развернуть 237/5000 A program that prompts the user to enter several octal, decimal, and hexadecimal numbers in any combination, using the suffixes 0 and 0x; correctly interprets these numbers and converts them to decimal.
+ A program that prompts the user to enter several octal, decimal, and hexadecimal numbers in any combination, using the suffixes 0 and 0x; correctly interprets these numbers and converts them to decimal.
