@@ -17,9 +17,11 @@ int main()
 void convert_to_decimal(string& s)
 {
     istringstream is(s);
-    char ch_t;
-    is >> ch_t;
-    if(ch_t == '0')
+    // char ch_t;
+    // is >> ch_t;
+    for(char ch_t; is >> ch_t;)
+    {
+        if(ch_t == '0')
         {
             is >> ch_t;
             if(ch_t == 'x')
@@ -45,6 +47,8 @@ void convert_to_decimal(string& s)
         string temp;
         cout << temp << "(decimal) turns into decimal" << temp << noshowbase << '\n';
     }
+    }
+    
     // is.unsetf(ios::dec);
     // is.unsetf(ios::oct);
     // is.unsetf(ios::hex);
