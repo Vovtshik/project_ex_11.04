@@ -9,7 +9,7 @@ int main()
         << "using the suffixes 0 and 0x:\n";
     string str_num;
     cin >> str_num;
-    vector<int> nums;
+    convert_to_decimal(str_num);
 
     return 0;
 }
