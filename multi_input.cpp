@@ -26,26 +26,28 @@ void convert_to_decimal(string& s)
             is >> ch_t;
             if(ch_t == 'x')
                 {
-                    string temp;
-                    is >> temp;
-                    temp = "0x" + temp;
-                    cout << showbase << hex << temp << "(hexadecimal)  turns into decimal " 
+                    string str_t;
+                    is >> str_t;
+                    str_t = "0x" + str_t;
+                    istringstream ist(str_t);
+                    int temp;
+                    ist >> temp;
+                    cout << showbase << hex << temp << " (hexadecimal)  turns into decimal " 
                     << dec << temp << noshowbase << '\n';
                 }
             else
                 {
                     is.unget();
-                    string temp;
-                    temp = '0' + temp;
+                    int temp;
                     cout << showbase << oct << temp << "(octal) turns into decimal" 
-                    << oct << temp << noshowbase << '\n';
+                    << dec << temp << noshowbase << '\n';
                 }
         }
     else
     {
         is.unget();
-        string temp;
-        cout << temp << "(decimal) turns into decimal" << temp << noshowbase << '\n';
+        int temp;
+        cout << temp << "(decimal) turns into decimal" << temp << '\n';
     }
     }
     
