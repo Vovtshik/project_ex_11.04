@@ -39,16 +39,19 @@ void convert_to_decimal(string& s)
                 {
                     is.unget();
                     int temp;
+                    is >> temp;
                     cout << showbase << oct << temp << "(octal) turns into decimal" 
                     << dec << temp << noshowbase << '\n';
                 }
         }
-    else
-    {
-        is.unget();
-        int temp;
-        cout << temp << "(decimal) turns into decimal" << temp << '\n';
-    }
+        else
+        {
+            is.unget();
+            int temp;
+            is >> temp;
+            cout << temp << "(decimal) turns into decimal" << temp << '\n';
+        }
+    
     }
     
     // is.unsetf(ios::dec);
