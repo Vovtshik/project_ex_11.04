@@ -8,7 +8,7 @@ int main()
         << "and hexadecimal integers in any combination \n"
         << "using the suffixes 0 and 0x:\n";
     string str_num;
-    cin >> str_num;
+    getline(cin, str_num);
     convert_to_decimal(str_num);
 
     return 0;
@@ -42,7 +42,7 @@ void convert_to_decimal(string& s)
                     ist.unget();
                     int temp;
                     ist >> temp;
-                    cout << showbase << oct << temp << "(octal) turns into decimal" 
+                    cout << showbase << oct << temp << " (octal) turns into decimal " 
                     << dec << temp << noshowbase << '\n';
                 }
         }
@@ -51,7 +51,7 @@ void convert_to_decimal(string& s)
             ist.unget();
             int temp;
             ist >> temp;
-            cout << temp << "(decimal) turns into decimal" << temp << '\n';
+            cout << temp << " (decimal) turns into decimal " << temp << '\n';
         }
     }
 }
