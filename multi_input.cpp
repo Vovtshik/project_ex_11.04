@@ -27,21 +27,25 @@ void convert_to_decimal(string& s)
             ist >> ch_t;
             if(ch_t == 'x')
                 {
-                    string str_t;
-                    ist >> str_t;
-                    str_t = "0x" + str_t;
-                    istringstream ist(str_t);
-                    //istringstream ist(str_t);
+                    while(ist >> ch_t)
+                    {
+                        continue;
+                    }
+                    istringstream ist(str);
                     int temp;
-                    ist >> temp;
+                    ist >> hex >> temp >> dec;
                     cout << showbase << hex << temp << " (hexadecimal)  turns into decimal " 
                     << dec << temp << noshowbase << '\n';
                 }
             else
                 {
-                    ist.unget();
+                     while(ist >> ch_t)
+                    {
+                        continue;
+                    }
+                    istringstream ist(str);
                     int temp;
-                    ist >> temp;
+                    ist >> oct >> temp >> dec;
                     cout << showbase << oct << temp << " (octal) turns into decimal " 
                     << dec << temp << noshowbase << '\n';
                 }
